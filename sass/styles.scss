@@ -1,0 +1,75 @@
+/**
+ * @file
+ * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
+ *
+ * When you turn on CSS aggregation at admin/config/development/performance, all
+ * of these @include files will be combined into a single file.
+ */
+
+/* Import Sass mixins, variables, Compass modules, etc. */
+@import "init";
+
+/* HTML element (SMACSS base) rules */
+@import "normalize";
+
+/* Layout rules */
+@import "layouts/responsive";
+
+/* Component (SMACSS module) rules */
+@import "components/misc";
+// Optionally, add your own components here.
+@import "print";
+
+/* SMACSS theme rules */
+/* @import "theme-A"; */
+/* @import "theme-B"; */
+
+$black: #0D0D0D;
+$white: white;
+$light_brown: #E8DBD2;
+$light_blue: #85D6DB;
+$blue: #00A7C0;
+$purple: #44425D;
+$red: #AE4250;
+$salmon: #FF566A;
+$login_background: $light_brown;
+$login_color: $red;
+.not-logged-in {
+	background-color: $black; 
+	
+}
+.login_box {
+	padding: 25px;
+	background-color: $login_background;
+	color: $login_color;
+	width: 450px;
+	height: auto;
+	margin: 25px auto 0;
+	border-radius: 12px;
+	header {
+		text-align: center;
+		.header__site-link:link {
+			color: $login_color;
+		}
+		.header__site-link:visited {
+			color: $login_color;
+		}
+		.header__name-and-slogan {
+			float: none;
+		}
+		.header__logo {
+			float: none;
+		}
+	}
+	h1 {
+		
+	}
+	.region-sidebar-first {
+		float: none;
+		width: 100%;
+		margin: 0;
+	}
+	.form-item input {
+		padding: 5px;
+	}
+}
